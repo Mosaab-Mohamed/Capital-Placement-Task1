@@ -1,0 +1,16 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+	background-color: #087b2f !important;
+	border-color: #087b2f !important;
+}
+
+.ant-switch.ant-switch-checked {
+	background: #087b2f !important;
+}

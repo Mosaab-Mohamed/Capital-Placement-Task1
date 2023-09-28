@@ -1,0 +1,63 @@
+.layout {
+	display: flex;
+	:global {
+		.sidebar {
+			position: sticky;
+			top: 0;
+			height: 100vh;
+			width: 60px;
+			padding-top: 30px;
+			text-align: center;
+			box-shadow: 0 1px 10px 1px #d0d0d0;
+			.ant-btn {
+				border: none;
+				.anticon {
+					font-size: 25px;
+				}
+			}
+		}
+		.main {
+			flex: 1;
+			padding-top: 80px;
+			.navbar {
+				display: flex;
+				box-shadow: 5px 1px 10px 1px lightgray;
+				.navItem {
+					flex: 1;
+					padding: 40px;
+					text-align: center;
+					position: relative;
+					&:not(:last-child)::after {
+						content: "";
+						position: absolute;
+						top: 50%;
+						right: 0;
+						width: 1px;
+						height: 60%;
+						transform: translateY(-50%);
+						background-color: #c4c4c4;
+					}
+					&.active {
+						background-color: #00635b;
+						.ant-typography {
+							color: white;
+						}
+						&::after {
+							content: "";
+							position: absolute;
+							top: 50%;
+							right: -10px;
+							width: 20px;
+							height: 20px;
+							transform: translateY(-50%) rotate(45deg);
+							background-color: #00635b;
+						}
+					}
+					.ant-typography {
+						font-size: 1rem;
+					}
+				}
+			}
+		}
+	}
+}

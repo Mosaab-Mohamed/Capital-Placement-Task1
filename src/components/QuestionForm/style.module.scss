@@ -1,0 +1,40 @@
+.question {
+	:global {
+		.portion {
+			margin-bottom: 15px;
+			.label {
+				margin-bottom: 10px;
+			}
+			.ant-select,
+			.ant-input {
+				width: 100%;
+				height: 50px;
+			}
+		}
+
+		.choice {
+			.label {
+				padding-left: 25px;
+			}
+			.inputWrapper {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
+		}
+
+		.actions {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-top: 30px;
+			.delete {
+				color: #a80000;
+			}
+			.save {
+				padding: 5px 15px;
+				background-color: #087b2f;
+			}
+		}
+	}
+}

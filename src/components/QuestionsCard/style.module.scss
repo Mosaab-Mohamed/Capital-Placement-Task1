@@ -1,0 +1,31 @@
+.questionCard {
+	// width: 50%;
+	margin-bottom: 20px;
+	:global {
+		.ant-card-head {
+			background-color: #d0f7fa;
+		}
+
+		.ant-btn {
+			padding: 0;
+
+			border: none;
+			box-shadow: none;
+			font-weight: bold;
+			&.add {
+				margin-top: 25px;
+			}
+		}
+	}
+}
+
+.addQuestionModal {
+	:global {
+		.ant-modal-content {
+			padding: 0;
+		}
+		.questionCard {
+			width: 100%;
+		}
+	}
+}
