@@ -22,7 +22,10 @@ export default function ApplicationForm() {
 	return (
 		<div style={{ padding: "20px 50px", width: "50%" }}>
 			<CoverImgInput />
-			<QuestionCard title="Personal Information">
+			<QuestionCard
+				title="Personal Information"
+				category="personalQuestions"
+			>
 				<InfoLine name="First Name" info={personalInformation.firstName} />
 
 				<InfoLine name="Last Name" info={personalInformation.lastName} />
@@ -66,7 +69,7 @@ export default function ApplicationForm() {
 			<RenderIfTruthy
 				prop={profile}
 				Component={
-					<QuestionCard title="Profile">
+					<QuestionCard title="Profile" category="profileQuestions">
 						<InfoLine name="Education" info={profile?.education!} />
 						<InfoLine name="Experience" info={profile?.experience!} />
 						<InfoLine name="Resume" info={profile?.resume!} />
@@ -84,7 +87,10 @@ export default function ApplicationForm() {
 				}
 			/>
 
-			<QuestionCard title="Additional questions">
+			<QuestionCard
+				title="Additional questions"
+				category="customisedQuestions"
+			>
 				{customisedQuestions?.map((question, index) => (
 					<QuestionLine
 						category="customisedQuestions"
